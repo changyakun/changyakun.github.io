@@ -205,15 +205,16 @@
     <!-- Method. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Method</h2>
 
         <!-- Pipeline. -->
         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            (a) The pipeline of the proposed solution. It contains three steps: Step \ding{172} spike preprocessing (\sref{subsec:spikeframe}), Step \ding{173} RGB frame processing, and Step \ding{174} merging into HFR video. 
+            Given the spike trains, we firstly estimate the optical flow from them as well as reconstruct spike frames. 
+            Secondly, we rectify the uneven brightness with a linear mapping function and use spike-guided deblurring (SG-deblur) to reconstruct sharp color frames. 
+            Finally, we use spike-guided frame interpolation (SG-interpolation) to recover the missing colors during $T_{\rm itv}$, and reconstruct time-consistent color frames. (b) and (c) show the detailed pipeline of SG-deblur and SG-interpolation.
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
