@@ -198,6 +198,39 @@
     </div>
     <!--/ Paper video. -->
   </div>
+  </section>
+
+
+
+
+  <section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          (a) The pipeline of the proposed solution. It contains three steps: Step 1 spike preprocessing, Step 2 RGB frame processing, and Step 3 merging into HFR video. 
+            Given the spike trains, we firstly estimate the optical flow from them as well as reconstruct spike frames. 
+            Secondly, we rectify the uneven brightness with a linear mapping function and use spike-guided deblurring (SG-deblur) to reconstruct sharp color frames. 
+            Finally, we use spike-guided frame interpolation (SG-interpolation) to recover the missing colors during the interval time, and reconstruct time-consistent color frames.
+            (b) and (c) show the detailed pipeline of SG-deblur and SG-interpolation.
+          </p>
+        </div>
+
+       </div>
+      <div class="column is-3 has-text-centered">
+            <img src="./static/images/pipline.jpg"
+                 class="interpolation-image"
+                 />
+      </div>      
+        
+      </div>
+    </div>
+  </div>
+    <!--/ Abstract. -->
+
+  
 
     <!-- Method. -->
     <div class="columns is-centered">
